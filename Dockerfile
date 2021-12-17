@@ -8,7 +8,7 @@ RUN ./mvnw dependency:go-offline
 COPY src ./src
 
 FROM base as test
-CMD ["./mvnw", "test"]
+RUN ["./mvnw", "test"]
 
 FROM base as build
 RUN ./mvnw package
