@@ -48,7 +48,7 @@ public class SpringBootRabbitMQApplication {
 	public String producer(@RequestParam("id") Integer id, @RequestParam("content") String content) {
 		//
 		try {
-			RabbitMessage msg = new RabbitMessage();
+			RabbitMessage msg = new RabbitMessage(id,content);
 			msg.setId(id);
 			msg.setContent(content);
 			rabbitMQSender.send(msg);
