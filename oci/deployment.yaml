@@ -31,5 +31,22 @@ spec:
 
       imagePullSecrets:
         - name: ocirsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: oke-sb-lb
+  labels:
+    app: oke-sb-demo
+  annotations:
+    service.beta.kubernetes.io/oci-load-balancer-shape: "flexible"
+    service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: "10"
+    service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: "100"
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+  selector:
+    app: oke-sb-demo        
 
       
