@@ -9,7 +9,7 @@ import com.oci.sb.rabbit.service.RabbitMQReceiver;
 public class RabbitMQReceiverTest {
 	
 	@Autowired
-	private RabbitMQReceiver rabbitMqReceiver;
+	private RabbitMQReceiver rabbitMqReceiver = new RabbitMQReceiver();
 	
 	@Test
 	public void shouldPrintTheReceivedMessage() throws Exception {
