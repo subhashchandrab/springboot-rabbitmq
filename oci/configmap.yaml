@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: oci-config
+data:
+  oci-config.json: >-
+    {
+    "RABBITMQ_HOST": true, 
+    "RABBITMQ_PORT": "5672",
+    "RABBITMQ_USER": "subhash", 
+    "RABBITMQ_PASSWORD": "ocirabbitmq", 
+    "RABBITMQ_EXCHANGE": "oci-rabbitmq.exchange", 
+    "RABBITMQ_QUEUE": "oci-rabbitmq.queue",
+    "RABBITMQ-ROUTINGKEY": "oci-rabbitmq.routingkey" 
+    }
