@@ -22,7 +22,7 @@ public class PostgreDataService {
 	@Value("${postgre.password}")
 	private String postgrePassword;
 
-	public void addUser(PostgreUser user) {
+	public void addUser(PostgreUser user) throws Exception{
 		final String INSERT_USERS_SQL = "INSERT INTO users" + "  (id, name, email, country, password) VALUES "
 				+ " (?, ?, ?, ?, ?);";
 		try {
@@ -46,8 +46,10 @@ public class PostgreDataService {
 				System.out.println("Cause: " + t);
 				t = t.getCause();
 			}
+			throw e;
 		} catch (Exception ex) {
 			ex.printStackTrace();
+			throw ex;
 		}
 	}
 }
