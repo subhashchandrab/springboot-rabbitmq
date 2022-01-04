@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import com.oci.sb.rabbit.model.PostgreUser;
+import com.oci.sb.postgre.model.PostgreUser;
 
 @Service
 public class PostgreDataService {
