@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.oci.sb.postgre.service.PostgreDataService;
-import com.oci.sb.rabbit.model.PostgreUser;
+import com.oci.sb.postgre.model.PostgreUser;
 import com.oci.sb.rabbit.model.RabbitMessage;
 import com.oci.sb.rabbit.service.RabbitMQSender;
 
